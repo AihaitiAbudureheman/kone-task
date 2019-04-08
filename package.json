@@ -1,0 +1,31 @@
+{
+  "name": "kone-task",
+  "version": "1.0.0",
+  "description": "Cloudant with Nodejs Runtime",
+  "main": "server.js",
+  "private": false,
+  "engines": {
+    "node": "6.*"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "client": "npm run client-dev",
+    "client-dev": "cd client && npm run start",
+    "server-dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-all": "npm i && cd client && npm i && cd ./..",
+    "start-all": "concurrently \"npm run server-dev\" \"npm run client-dev\""
+  },
+  "keywords": [
+    "Kone"
+  ],
+  "dependencies": {
+    "@cloudant/cloudant": "^3.0.2",
+    "body-parser": "^1.17.x",
+    "cfenv": "^1.0.x",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.x"
+  },
+  "author": "AihaitiAbudureheman",
+  "license": "MIT"
+}
